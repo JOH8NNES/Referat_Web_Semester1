@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seite3</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel="stylesheet" href="style_web_referat_s1.css"/>
-    <script defer src="script_web_referat_s1.js"></script>
+      <link rel="stylesheet" href="./style_web_referat_s1.css"/>
+    <script defer src="./script_web_referat_s1.js"></script>
 </head>
 <body>
   <div class="intro">
@@ -16,11 +16,11 @@
     <h2 id="unter">Account</h2>
   
     <div class="topnav">
-        <a href="/index_web_referat_s1.html">Homepage</a>
-        <a href="/seite2_web_referat_s1.html">Spiele</a>
-        <a href="/seite3_web_referat_s1.html" class="active">Account <i class="glyphicon glyphicon-user"></i></a>
-        <a href="/seite4_web_referat_s1.html">Quellen</a>
-        <a href="/signup-login_web_referat_s1.html">Logout</a>
+        <a href="./index_web_referat_s1.html">Homepage</a>
+        <a href="./seite2_web_referat_s1.html">Spiele</a>
+        <a href="./seite3_web_referat_s1.html" class="active">Account <i class="glyphicon glyphicon-user"></i></a>
+        <a href="./seite4_web_referat_s1.html">Quellen</a>
+        <a href="./signup-login_web_referat_s1.html">Logout</a>
       </div>
 
       <br>
@@ -39,7 +39,11 @@
         <br><br><br>
       </div>
 
-      <input type="button" id="delete_account" onclick="deleteaccount()" value="delete current account">
+
+      <form action="sql.php" method="get" onsubmit="return submitForm(this);">
+      <input type="text" name="ID" value="123"/>
+      <button id="delete_account" onclick="deleteaccount()">delete current account</button>
+      </form>
       
 
       <!-- <input type="date" id="date">        //wenn Account erstellt-->
