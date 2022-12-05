@@ -1,0 +1,200 @@
+html {
+    background-color: black;
+    text-align:center;
+}
+
+body {
+  background-color: black;
+}
+
+#ueber {
+    font-size: 50;
+    color: red;
+    text-decoration: underline;
+    text-align: left;
+}
+
+#unter {
+    font-size: 16;
+    color: lightgreen;
+    text-decoration: underline;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p {
+    color: white;
+}
+
+.p1 {
+  color: white;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.icon_quer {
+    height: 250px;
+    width: auto;
+    cursor: pointer;
+    padding: 2px;
+}
+
+#icon_home {
+    border-color: white;
+    border-width: 2px;
+    width: 50px;
+    height: auto;
+    float: left;
+}
+
+.intro #icon_home2 {
+  border-color: white;
+  border-width: 2px;
+  width: 50px;
+  height: auto;
+  align-items: center;
+}
+
+.intro {
+  cursor: pointer;
+}
+
+.intro #ueber2 {
+  font-size: 70;
+    color: red;
+    text-decoration: underline;
+    align-items: center;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .topnav input[type=text] {
+    float: right;
+    padding: 6px 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+
+  #search {
+    float: right;
+    padding: 6px;
+    border: 1px;
+    border-color: lightgrey;
+    margin-top: 8px;
+    font-size: 17px;
+  }
+/*   
+  .search_icon {
+    float: right;
+    margin-top: 8px;
+    height: 28px;
+    width: auto;
+    cursor: pointer;
+  }
+
+  .search_icon :hover {
+    border: 2px;
+    border-color: grey;
+  } */
+
+  .topnav a:hover,       /*Mauszeiger: pointer*/
+  .intro :hover,
+  .spiele figcaption {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .welcome {
+    color: red;
+    font-size: 250%;
+    text-decoration: underline;
+  }
+
+  .source {
+    color: dodgerblue;
+    text-decoration: none;
+  }
+
+  .source :hover {
+    text-decoration: underline;
+  }
+
+  .source :visited {
+    color: yellow;
+  }
+
+  #spiele {
+    display: flex;
+    align-items: center;
+  }
+
+  #myInput {
+    background-image: url('/search.jpeg');
+    /* background-position: 10px 12px; */
+    /* background-repeat: no-repeat; */
+    width: 15%;
+    font-size: 14px;
+    padding: 5px 20px 5px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+  /* #spiele figure figcaption {
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+  } */
+
+  #spiele {
+      /* Remove default list styling */
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .beschr {
+    background-color: black;
+    color: white;
+    width: 6%;
+    border: none;
+  }
+
+  .accout_output {
+    background-color: white;
+    color: black;
+  }
+
+  #noback {
+    visibility: hidden;
+  }
