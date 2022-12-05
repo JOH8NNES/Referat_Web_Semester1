@@ -50,24 +50,14 @@ function schliessen() {
     window.close(this);  //Spiele-Window wird geschlossen
 }
 
-
-function newaccount() {   //delete account and create new one
-  
-}
-
 function deleteaccount() { //delete account
   let confirmAction = confirm('Are you sure you want to delete your current account?');
   if (confirmAction) {
-    //deletes account
+    //DELETE ID, Username, Password, Date_of_creation from accounts WHERE (ID = 
   }
 }
 
-function noback() {
-  window.history.pushState(null, null, window.location.href);
-window.onpopstate = function () {
-    window.history.go(1);
+  window.history.forward();
+  function noback() {
+    window.history.forward();
 }
-}
-// function noback() {
-//   window.history.forward();
-// }
