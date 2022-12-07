@@ -198,3 +198,9 @@ body {
   #noback {
     visibility: hidden;
   }
+
+  .gif {
+    height: 500px;
+    width: auto;
+    border-radius: 0;
+  }
