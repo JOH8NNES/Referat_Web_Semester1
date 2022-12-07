@@ -9,19 +9,45 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$ID = $_GET["ID"];
+// $ID = $GET["ID"];
 
-echo $ID;
+function deleteaccount() {    
+    $ID = $_GET["ID"];
+    $sql = "DELETE FROM accounts WHERE ID = $ID";
 
-$sql = "DELETE FROM accounts WHERE ID = $ID";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Account deleted successfully!";
+    $sql;
+ 
+    if ($conn->query($sql) === TRUE) {
+        echo "Account deleted successfully!";
+    } else {
+        echo "ERROR deleting Account";
+    }
 }
-else {
-    echo "ERROR deleting Account: " . $conn->connect_error;
+
+function addaccount() {
+
+    // $user = INPUT_GET["#username_input"];
+    // $pw = INPUT_GET["#password_input"];
+    // $pw = #password_input.value;
+    $date_of_creation = date("Y/m/d");
+
+    $stmt = "INSERT INTO accounts (ID primary, username, pw, date_of_creation) VALUES (auto, $user, $pw, $date_of_creation)";
+
+    $stmt;
+
+    if ($stmt === TRUE) {
+        echo "Account added successfully!";
+    }
+    else {
+        echo "ERROR adding Account!";
+    }
 }
 
-$conn->close();
+function login() {
+    // $user = ;
+    // $user_input = INPUT_GET["#username_input"];
+}
+
+// $conn->close();
 
 ?>

@@ -7,6 +7,7 @@
     <title>Seite3</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="./style_web_referat_s1.css"/>
+      <link rel="php" href="sql.php">
     <script defer src="./script_web_referat_s1.js"></script>
 </head>
 <body>
@@ -26,10 +27,10 @@
       <br>
       <div id="account_formular">
         <input type="text" class="beschr" value="Id: " disabled>
-        <input type="text" class="accout_output" id="account_id" disabled>
+        <input type="text" value="<?php echo htmlspecialchars($ID);?>" class="accout_output" id="account_id" disabled>
         <br><br>
         <input type="text" class="beschr" value="Username: " disabled>
-        <input type="text" class="accout_output" id="account_user" disabled>
+        <input type="text" value="<?php echo htmlspecialchars($user);?>" class="accout_output" id="account_user" disabled>
         <br><br>
         <input type="text" class="beschr" value="Password: " disabled>
         <input type="text" class="accout_output" id="account_pw" disabled>

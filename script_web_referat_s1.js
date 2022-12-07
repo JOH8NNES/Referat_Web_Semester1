@@ -53,7 +53,10 @@ function schliessen() {
 function deleteaccount() { //delete account
   let confirmAction = confirm('Are you sure you want to delete your current account?');
   if (confirmAction) {
-    //DELETE ID, Username, Password, Date_of_creation from accounts WHERE (ID = 
+    
+  }
+  else {
+    return;
   }
 }
 
