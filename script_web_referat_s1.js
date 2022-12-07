@@ -53,7 +53,7 @@ function schliessen() {
 function deleteaccount() { //delete account
   let confirmAction = confirm('Are you sure you want to delete your current account?');
   if (confirmAction) {
-    
+    deleteaccount2();
   }
   else {
     return;
