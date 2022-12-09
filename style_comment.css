@@ -7,4 +7,14 @@
 
 .kommentar_button {
     align-items: center;
+    height: 30px;
+    width: auto;
+    font-size: 18px;
+    margin-left: 46%;
+}
+
+.kommentar_vorhanden {
+    align-items: center;
+    color: black;
+    background-color: white;
 }

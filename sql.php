@@ -27,9 +27,9 @@ function deleteaccount2() {
 
 function addaccount() {
 
-    // $user = INPUT_GET["#username_input"];
-    // $pw = INPUT_GET["#password_input"];
-    // $pw = #password_input.value;
+    $user = $_GET["username_input"];
+    $pw = $_GET["password_input"];
+    $pw = $_GET["password_input"];
     $date_of_creation = date("Y/m/d");
 
     $stmt = "INSERT INTO accounts (ID primary, username, pw, date_of_creation) VALUES (auto, $user, $pw, $date_of_creation)";

@@ -32,7 +32,7 @@ function search() {
   input = document.getElementById('myInput');
   filter = input.value.toUpperCase();
   ul = document.getElementById("spiele");
-  li = ul.getElementsByTagname('figure');
+  li = ul.getElementsByTagname('figure'); debugger
 
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
@@ -50,7 +50,7 @@ function schliessen() {
     window.close(this);  //Spiele-Window wird geschlossen
 }
 
-function deleteaccount() { //delete account
+function deleteaccount() {
   let confirmAction = confirm('Are you sure you want to delete your current account?');
   if (confirmAction) {
     deleteaccount2();
