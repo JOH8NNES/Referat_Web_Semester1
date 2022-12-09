@@ -68,6 +68,12 @@ function kommentieren() {
     //placeholder
 }
 
+function spieleladen() {
+    i = 
+    $game = "SELECT img FROM games WHERE ID = i";
+
+    $game;
+}
 // $conn->close();
 
 ?>
