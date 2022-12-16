@@ -12,7 +12,8 @@ if ($conn->connect_error) {
 
 // $ID = $GET["ID"];
 
-function deleteaccount2() {    
+function deleteaccount2() {
+    global $conn;
     $ID = $_GET["ID"];
     $sql = "DELETE FROM accounts WHERE ID = $ID";
 
@@ -27,37 +28,36 @@ function deleteaccount2() {
 }
 
 function addaccount() {
-
+    global $conn;
     $user = $_GET["username_input"];
     $pw = $_GET["password_input"];
-    $pw = $_GET["password_input"];
+    $pw_confirm = $_GET["password_confirm"];
     $date_of_creation = date("Y/m/d");
 
-    $stmt = "INSERT INTO accounts (ID primary, username, pw, date_of_creation) VALUES (auto, $user, $pw, $date_of_creation)";
-
-    $smth = $conn->query($stmt);
+    if ($pw === $pw_confirm) {
+        $stmt = "INSERT INTO accounts (ID primary, username, pw, date_of_creation) VALUES (auto, $user, $pw, $date_of_creation)";
+        $smth = $conn->query($stmt);
+    }
 
     if ($smth === TRUE) {
         echo "Account added successfully!";
     }
-    else {
+    if ($smth === FALSE) {
         echo "ERROR adding Account!";
     }
 }
 
 function login() {
-   
+    global $conn;
     $user_input = $_GET["username_input"];
     $user = "SELECT username FROM account WHERE username = $user_input";
     
     $pw_input = $_GET["password_input"];
     $pw = "SELECT pw FROM account WHERE pw = $pw_input";
 
-    $pw_confirm = $_GET["password_confirm"];
-
     $message = "Die angegebenen Informationen sind falsch.";
 
-    if ($user === TRUE && $pw === TRUE && $pw_confirm === $pw) {
+    if ($user === TRUE && $pw === TRUE) {
         echo '<meta http-equiv="refresh" content="0; URL=./index_web_referat_s1.html">';
 
     }
@@ -67,6 +67,7 @@ function login() {
 }
 
 function kommentieren() {
+    global $conn;
     $input = $_GET["Kommentar"];
     $date_of_comment = date("Y/m/d");
     $uname = $_GET["username_input"];
@@ -84,6 +85,7 @@ function kommentieren() {
 }
 
 function spieleladen() {
+    global $conn;
     $game = "SELECT img, Titel FROM games";
     $game_output = $conn->query($game);
 
