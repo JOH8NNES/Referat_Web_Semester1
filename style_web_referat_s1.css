@@ -34,6 +34,11 @@ body {
   font-size: larger;
 }
 
+#search_output {
+  color: white;
+  justify-content: left;
+}
+
 .icon_quer {
     height: 250px;
     width: auto;

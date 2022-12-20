@@ -50,17 +50,38 @@ function zurueck2() {
 //search function
   document.getElementById('search_input').addEventListener('keyup', function() {
     var searchQuery = this.value;
+    // console.log(searchQuery);
+
+    if (!searchQuery) {
+      $('#search_output').html("");
+      return;
+    }
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'search.php?q=' + searchQuery, true);
     xhr.onload = function() {
       if (this.status == 200) {
         var name = this.responseText;
-        document.getElementById('search_input').value = name;
+        // document.getElementById('search_output').value = name;
+        // console.log(JSON.parse(name));
+
+        var ergebnis = JSON.parse(name);
+
+        $('#search_output').html("");
+        // $('#search_output').html("<ul>");
+        for (var i = 0; i < ergebnis.length; i++) {
+          $('#search_output').append("<p>");
+          $('#search_output').append(ergebnis[i]);
+          $('#search_output').append("</p>");
+        }
+
+        // $('#search_output').append("</ul>");
+
       }
     };
     xhr.send();
   });
+
 
 
 

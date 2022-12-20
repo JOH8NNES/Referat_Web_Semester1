@@ -18,11 +18,21 @@ $searchQuery = $_GET['q'];
 $sql = "SELECT Titel FROM games WHERE Titel LIKE '%$searchQuery%'";
 $result = mysqli_query($conn, $sql);
 
+$array = array();
+
+
+while ($row = $result->fetch_assoc()) {
+    // echo $row["Titel"];
+    array_push($array, $row["Titel"]);
+}
+
+// print_r($array);
+
 //process results
-$row = mysqli_fetch_assoc($result);
-$name = $row['Titel'];
+// $row = mysqli_fetch_assoc($result);
+// $name = $row['Titel'];
 
 //output
-echo $name;
+echo json_encode($array);
 
 ?>
