@@ -87,10 +87,14 @@ function kommentieren() {
 function vorhandenekommentare() {
     global $conn;
     $game_name = $_GET["name"];
-    $comment = "SELECT user, comment, date_of_comment FROM comments WHERE (game === $game_name)";
+    $comment = "SELECT user, comment, date_of_comment FROM comments WHERE (game == $game_name)";
     $comment_output = $conn->query($comment);
 
-    // if 
+    if ($game_name->num_rows > 0) {
+        while ($row = $comment_output->fetch_assoc()) {
+            echo $row["user"] . $row["comment"] . $row["date_of_comment"] . "<br>";
+        }
+    }
 }
 
 function spieleladen() {
