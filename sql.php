@@ -84,6 +84,15 @@ function kommentieren() {
     }
 }
 
+function vorhandenekommentare() {
+    global $conn;
+    $game_name = $_GET["name"];
+    $comment = "SELECT user, comment, date_of_comment FROM comments WHERE (game === $game_name)";
+    $comment_output = $conn->query($comment);
+
+    // if 
+}
+
 function spieleladen() {
     global $conn;
     $game = "SELECT img, Titel FROM games";
@@ -96,6 +105,7 @@ function spieleladen() {
     }
     
 }
+
 // $conn->close();
 
 ?>

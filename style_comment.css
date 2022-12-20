@@ -1,20 +1,54 @@
 .kommentar_feld {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin-left: 15%;
     height: 100px;
-    width: 50%;
+    width: 70%;
+    margin-top: 5%;
     /* noch auf Blocktext setzen */
 }
 
 .kommentar_button {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 30px;
+    height: 25px;
     width: auto;
     font-size: 18px;
-    margin-left: 46%;
+    margin-left: 45%;
+    margin-top: -3%;
 }
 
 .kommentar_vorhanden {
     align-items: center;
     color: black;
     background-color: white;
+}
+
+.tabelle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 5%;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+/* .comment_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.schliessen2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 73.9%;
+    margin-top: -7.4%;
 }
