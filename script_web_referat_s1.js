@@ -103,3 +103,29 @@ function deleteaccount() {
   function noback() {
     window.history.forward();
 }
+
+function spieleladen() {
+  var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'sql.php?spieleladen');
+    xhr.onload = function() {
+      if (this.status == 200) {
+        var name = this.responseText;
+        // document.getElementById('search_output').value = name;
+        // console.log(JSON.parse(name));
+
+        var ergebnis = JSON.parse(name);
+
+        // $('#loadgames').html("");
+        // $('#search_output').html("<ul>");
+        for (var i = 0; i < ergebnis.length; i++) {
+          $('#loadgames').append("<div>");
+          $('#loadgames').append(ergebnis[i]);
+          $('#loadgames').append("</div>");
+        }
+
+        // $('#search_output').append("</ul>");
+
+      }
+    };
+    xhr.send();
+  }
