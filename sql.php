@@ -12,10 +12,10 @@ if ($conn->connect_error) {
 
 // $ID = $GET["ID"];
 
-function deleteaccount2() {
+function deleteaccount() {
     global $conn;
-    $ID = $_GET["ID"];
-    $sql = "DELETE FROM accounts WHERE ID = $ID";
+    $ID = $_GET["deletion"];
+    $sql = "DELETE FROM accounts WHERE user = $ID";
 
     $delete = $conn->query($sql);
  

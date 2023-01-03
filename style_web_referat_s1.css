@@ -76,6 +76,7 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #333;
+    margin-top: 20px;
   }
   
   .topnav a {
@@ -194,7 +195,7 @@ body {
   .beschr {
     background-color: black;
     color: white;
-    width: 6%;
+    width: fit-content;
     border: none;
   }
 
